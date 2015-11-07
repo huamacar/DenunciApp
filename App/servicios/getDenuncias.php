@@ -12,7 +12,7 @@
             echo "<h4>" . $row["fecha"] . "</h4>";
             echo "<h5>" . $row["ubicacion"] . "</h5>";
             echo "<h4>" . $row["valoracion"] . "</h4>";
-            echo "<input type='button' class='btn btn-primary' value='Ver Detalles'>"
+            echo "<input type='button' class='btn btn-primary' value='Ver Detalles'>";
             echo "</div>";
     	}
 	}
