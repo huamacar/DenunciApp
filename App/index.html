@@ -22,30 +22,86 @@
     	<div class='container-fluid seccion'>
         	<section id='scPrincipal'>
                 <div class='row'>
-                    <div class='col-lg-4 col-md-4 col-xs-12 bloque'>
-                        <img src='img/denuncia-icon.png' class='img-circle grow' width='150' height='150'>
+                    <div class='col-lg-4 col-md-4 col-xs-12 bloque' id='dvNuevaDenuncia'>
+                        <img src='img/denuncia-icon.png' data-toggle="popover" data-placement="top" data-content='Registro de Nuevas Denuncias' class='img-circle grow' width='150' height='150' id='btnRegistroDenuncias'>
                         <h2>Registrar Denuncia</h2>
                         <p>Seleccione esta opcion para registrar una nueva denuncia en el sitio, posteriormente podrá compartirla en su red social favorita y las autoridades la verificarán.</p>
                     </div>
-                    <div class='col-lg-4 col-md-4 col-xs-12 bloque'>
-                    	<img src='img/registro-icon.png' class='img-circle grow' width='150' height='150'>
+                    <div class='col-lg-4 col-md-4 col-xs-12 bloque' id='dvNuevoRegistro'>
+                    	<img src='img/registro-icon.png' data-toggle="popover" data-placement="top" data-content='Registro de Usuarios' class='img-circle grow' width='150' height='150' id='btnRegistroUsuarios'>
                         <h2>Registro</h2>
                         <p>Registrate en nuestro sitio, ayúdanos a mejorar la forma de denucniar votando e informando de las denuncias que se realizan a diario en nuestro sitio web.</p>
                     </div>
-                    <div class='col-lg-4 col-md-4 col-xs-12 bloque'>
-                    	<img src='img/login-icon.png' class='img-circle grow' width='150' height='150'>
+                    <div class='col-lg-4 col-md-4 col-xs-12 bloque' id='dvIngreso'>
+                    	<img src='img/login-icon.png' data-toggle="popover" data-placement="top" data-content='Ingreso de Usuarios a la Plataforma' class='img-circle grow' width='150' height='150' id='btnIngresoUsuarios'>
                         <h2>Ingreso</h2>
                         <p>Ingresa a tu perfil para poder compartir denuncias y votar por las denuncias ya registradas</p>
+                    </div>
+                    <div class='col-lg-4 col-md-4 col-xs-12 bloque' id='dvEditarPerfil'>
+                        <img src='img/profile-icon.png' data-toggle="popover" data-placement="top" data-content='Editar Mi Perfil' class='img-circle grow' width='150' height='150' id='btnEditarPerfil'>
+                        <h2>Edición de Perfil</h2>
+                        <p>Selecciona esta opción para editar los datos de tu perfil, además encontrarás todas las denuncias que has realizado desde la mas reciente a la más antigua.</p>
+                    </div>
+                    <div class='col-lg-4 col-md-4 col-xs-12 bloque' id='dvSalir'>
+                        <img src='img/exit-icon.png' data-toggle="popover" data-placement="top" data-content='Salir del Sistema' class='img-circle grow' width='150' height='150' id='btnSalirSistema'>
+                        <h2>Salir del Sistema</h2>
+                        <p>Selecciona esta opción para salir del sistema.</p>
                     </div>
                 </div>
             </section>
             <section id='scDenunciasRecientes'>
-            	<h1>Explora las Denuncias Más Recientes</h1>
+            	<h1>Explora las Denuncias Más Recientes</h1><br><br>
                 <div class='row' id='dvDenunciasRecientes'>
                 	
                 </div>
             </section>
     	</div>
         <div class='loading'></div>
+        <div class="modal fade" id="IngresoUsuarios" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content centrado">         
+					<div class="modal-body">
+                            	<img src='img/login-icon.png' width="140" height="140">
+                                <h1>Ingreso de Usuarios</h1>
+                                <form id='frmLogin' class='separacionVertical'>
+                                    <input type='email' id='txtLogMail' class='form-control' placeholder='Correo Electrónico' required><br>
+                                    <input type='password' id='txtLogPass' class='form-control' placeholder='Contraseña' required><br><br>
+                                    <button type='submit' id='btnLogin' class='btn btn-primary'>Ingresar</button>
+                                </form>
+                        </div>
+					</div>
+        		</div>
+      		</div>
+    	</div>
+        <div class="modal fade" id="verDetalleDenuncia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content centrado">         
+					<div class="modal-body" id='dvDetalleDenuncia'>
+                    
+					</div>
+        		</div>
+      		</div>
+    	</div>
+        <div class="modal fade" id="dvNuevoUsuario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content centrado">         
+					<div class="modal-body">
+                    	<h1><b>Registrarse como Nuevo Usuario</b></h1>
+                        <img src='img/registro-icon.png' width='200' height='200'>
+                        <form id='frmRegistro'>
+                            <input type='text' placeholder='Nombres' class='form-control' id='txtNombres' required>
+                            <input type='text' placeholder='Apellidos' class='form-control' id='txtApellidos' required>
+                            <input type='email' placeholder='Correo Electrónico' class='form-control' id='txtEMail' required>
+                            <input type='text' placeholder='Nickname' class='form-control' id='txtNickname' required>
+                            <input type='password' placeholder='Contraseña' class='form-control' id='txtPassword' required>
+                            <input type='password' placeholder='Repetir Contraseña' class='form-control' id='txtRepPassword' required><br>
+                            <textarea placeholder='Cuentanos algo de ti' class='form-control' id='txtAcercaDe' required></textarea>
+                            <h5>Foto de Perfil<input type='file' placeholder='Foto de Perfil' class='form-control' id='txtFotoPerfil' required></h5>
+                            <input type='submit' value='Registrarse' class='btn btn-primary' id='btnRegistrarse' required>
+                        </form>
+					</div>
+        		</div>
+      		</div>
+    	</div>
     </body>
 </html>

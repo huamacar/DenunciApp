@@ -42,3 +42,37 @@ h1{
 	font-family:Opificio;
 	padding:5%;
 }
+.denuncia{
+	padding:3%;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border: 1px solid #000000;
+	-webkit-transition: all 1s; /* Safari */
+    transition: all 1s;
+}
+.denuncia:hover{
+	background-color:#E5E5E5;	
+}
+#dvDetalleDenuncia{
+	text-align:center;	
+}
+#IngresoUsuarios{
+	text-align:center;	
+}
+#IngresoUsuarios input{
+	text-align:center;	
+}
+.modal-body{
+	text-align:center;
+}
+.modal-body input{
+	text-align:center;	
+	margin-top:3%;
+}
+#dvEditarPerfil{
+	display:none;	
+}
+#dvSalir{
+	display:none;	
+}
