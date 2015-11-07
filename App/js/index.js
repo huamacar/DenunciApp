@@ -25,6 +25,7 @@ function mostrarItemsMenu(){
 			$('#dvNuevoRegistro').css('display','none');	
 		}	
 }
+var nombreFotoPerfil;
 $(document).ready(function(){
 	mostrarItemsMenu();
 	$('#mnMenuPrincipal').click(function(){
@@ -51,7 +52,7 @@ $(document).ready(function(){
 				showSuccess("Ingreso Correcto");
 				mostrarItemsMenu();
 			}else{
-				showMessage(e);	
+				showMessage(e);
 			}
 		});
 	});
@@ -62,4 +63,10 @@ $(document).ready(function(){
 	$('#frmRegistro').on('submit',function(e){
 		
 	});
+	$('#uplFotoPerfil').liteUploader({
+				script: 'basic.php'
+			})
+			.on('lu:success', function (e, response) {
+				nombreFotoPerfil = response;
+			});
 });

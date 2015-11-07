@@ -11,7 +11,11 @@
             echo "<h3>" . $row["titulo"] . "</h3>";
             echo "<h4>" . $row["fecha"] . "</h4>";
             echo "<h4>" . $row["valoracion"] . "</h4>";
+
             echo "<input type='button' class='btn btn-primary' value='Ver Detalles' onClick='getDetalleDenuncia(". $row["iddenuncia"] .")'>";
+
+            echo "<input type='button' class='btn btn-primary' value='Ver Detalles'>";
+
             echo "</div>";
     	}
 	}

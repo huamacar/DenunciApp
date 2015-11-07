@@ -12,6 +12,14 @@ function toogleLoading(){
 		LoadingState = true;	
 	}
 }
+function subirArchivoAjax(archivo){
+	$('#uplFotoPerfil').liteUploader({
+				script: 'basic.php'
+			})
+			.on('lu:success', function (e, response) {
+				alert('Uploaded!');
+			});
+}
 function showSuccess(mensaje){
 	$.toaster({ priority : 'success', title : 'Exito!!!', message : mensaje});
 }
