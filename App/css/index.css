@@ -1,0 +1,35 @@
+@font-face{
+	font-family:Rondalo;
+	src:url(../fonts/RONDALO_.TTF);
+}
+@font-face{
+	font-family:Opificio;
+	src:url(../fonts/Opificio.ttf);	
+}
+.container-fluid{
+	font-family:Opificio;
+}
+body{
+	background-image:url(../img/fondo.png);
+	font-family:Rondalo;
+}
+h1{
+	font-weight:bold;
+}
+#titulo{
+	text-align:center;	
+}
+#titulo h1{
+	font-size:70px;
+	color:#666;
+}
+#titulo h1 a{
+	color:#090;	
+}
+.bloque{
+	text-align:center;
+	padding:5%;	
+}
+.bloque p{
+	text-align:justify;	
+}
