@@ -11,4 +11,7 @@ $(document).ready(function(){
 	$('#mnMenuPrincipal').click(function(){
 		showSeccion($('#scPrincipal'));
 	});
+	sendData('servicios/getDenuncias.php',null,function(e){
+		$('#dvDenunciasRecientes').html(e);
+	});
 });

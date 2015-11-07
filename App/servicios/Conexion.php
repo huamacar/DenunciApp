@@ -2,7 +2,7 @@
 	$servername = "localhost";
 	$username = "root";
 	$password = "darsagastume";
-	$dbname = "c03cys_xv_db";
+	$dbname = "bd_denunciapp";
 	
 	$conn = new mysqli($servername, $username, $password, $dbname);
 	if ($conn->connect_error) {
