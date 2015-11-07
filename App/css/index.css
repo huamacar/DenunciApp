@@ -33,7 +33,7 @@ h1{
 .bloque p{
 	text-align:justify;	
 }
-#scDenunciasRecientes{
+.seccionVisible{
 	-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);	
@@ -41,6 +41,7 @@ h1{
 	text-align:center;
 	font-family:Opificio;
 	padding:5%;
+	display:none;
 }
 .denuncia{
 	padding:3%;
